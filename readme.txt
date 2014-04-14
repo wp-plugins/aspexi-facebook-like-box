@@ -20,7 +20,7 @@ Like facebook page box. Faces enabled by default. Language editable. More custom
 
 == Installation ==
 
-1. Upload `aspexi-facebook-likebox` directory to the `/wp-content/plugins/` directory
+1. Upload `aspexi-facebook-like-box` directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Configure plugin
 

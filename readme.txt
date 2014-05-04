@@ -4,9 +4,9 @@ Author URI: http://aspexi.com
 Contributors: aspexi,cih997
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dryja%40aspexi%2ecom&lc=US&item_name=Aspexi%20Facebook%20Like%20Box%20Wordpress%20Plugin&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: facebook, likebox, like box, floating, button
-Requires at least: 3.8.2
-Tested up to: 3.8.2
-Stable tag: 1.0.0
+Requires at least: 3.3
+Tested up to: 3.9
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,9 +14,65 @@ Plugin adds facebook like box slide on hover.
 
 == Description ==
 
-Plugin adds facebook like box slide on hover.
+Plugin adds Facebook Like Box slider.
 
-Like facebook page box. Faces enabled by default. Language editable. More customizations in next release.
+####Free version####
+
+* **Facebook Like Box** for any facebook page
+
+* Choose Facebook language
+
+* **iPhone / iPad** compatible
+
+####Premium version####
+
+* Like Box for any Facebook page
+
+* Choose Facebook language
+
+* iPhone / iPad compatible
+
+* High resolution buttons (SVG files included)
+
+* 8 amazing original icons / buttons
+
+* On / off for mobile
+
+* http or https option
+
+* Button placement customization
+
+* Disable for iframe
+
+* Enable / disable friend's faces
+
+* Set number of connections
+
+* Show posts
+
+* Force wall
+
+* On / off Facebook header
+
+* Set button space from page edge
+
+* Horizontal placement (left / right)
+
+* Vertical placement (center / fixed)
+
+* Set Like Box height &amp; width
+
+* Facebook color scheme (light / dark)
+
+* Set border color &amp; width
+
+* Set background color
+
+* Slide on mouse hover / click
+
+* Set slide time
+
+* [Get Premium version](http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/)
 
 == Installation ==
 
@@ -30,6 +86,14 @@ Like facebook page box. Faces enabled by default. Language editable. More custom
 
 Simply go to Appearance -> Facebook Like Box
 
+= Can I use my custom Facebook button image? =
+
+Yes. Just create your file and copy it to your current theme (or child) directory:
+
+* **required file URL**: TEMPLATE_DIR/plugins/aspexi-facebook-like-box/images/aspexi-fb-custom.png
+
+* **required image width**: 48px
+
 == Screenshots ==
 
 1. Plugin in action
@@ -38,10 +102,18 @@ Simply go to Appearance -> Facebook Like Box
 
 == Changelog ==
 
+= 1.1.0 =
+* Custom Facebook button file available (see FAQ)
+* Admin URL fix
+* Admin notifications
+
 = 1.0.0 =
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+New configuration. Default values of previous version are preserved.
 
 = 1.0.0 =
 Initial release, no upgrade available.

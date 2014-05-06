@@ -3,7 +3,7 @@ Author: Krzysztof Dryja (Aspexi)
 Author URI: http://aspexi.com
 Contributors: aspexi,cih997
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dryja%40aspexi%2ecom&lc=US&item_name=Aspexi%20Facebook%20Like%20Box%20Wordpress%20Plugin&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tags: facebook, likebox, like box, floating, button, slider
+Tags: facebook, likebox, like box, floating, button, slider, facebook likebox, facebook like box
 Requires at least: 3.3
 Tested up to: 3.9
 Stable tag: 1.1.0

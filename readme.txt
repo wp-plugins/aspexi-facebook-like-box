@@ -3,18 +3,18 @@ Author: Krzysztof Dryja (Aspexi)
 Author URI: http://aspexi.com
 Contributors: aspexi,cih997
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dryja%40aspexi%2ecom&lc=US&item_name=Aspexi%20Facebook%20Like%20Box%20Wordpress%20Plugin&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
-Tags: facebook, likebox, like box, floating, button, slider, facebook likebox, facebook like box
-Requires at least: 3.3
-Tested up to: 3.9
-Stable tag: 1.1.0
+Tags: facebook, likebox, like box, floating, button, slider, facebook likebox, facebook like box, facebook slider, facebook buttons
+Requires at least: 3.0
+Tested up to: 3.9.1
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Plugin adds facebook like box slide on hover.
+Plugin adds fancy Facebook Like Box slider (slide on hover).
 
 == Description ==
 
-Plugin adds Facebook Like Box slider.
+Plugin adds fancy Facebook Like Box slider (slide on hover).
 
 ####Free version####
 
@@ -48,6 +48,7 @@ Plugin adds Facebook Like Box slider.
 * Set background color
 * Slide on mouse hover / click
 * Set slide time
+* Disable on small screens
 * **1-Year upgrades &amp; support**
 * [Get Premium version](http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=plugin_page)
 
@@ -59,7 +60,7 @@ Plugin adds Facebook Like Box slider.
 
 Premium version only:
 
-4. Put license code from confirmation email into plugin configuration and click Activate License
+Put license code from confirmation email into plugin configuration and click Activate License
 
 == Frequently Asked Questions ==
 
@@ -69,7 +70,7 @@ Simply go to Appearance -> Facebook Like Box
 
 = Can I use my custom Facebook button image? =
 
-Yes. Just create your file and copy it to your current theme (or child) directory:
+Yes. Simply create your file and copy it to your current theme (or child) directory:
 
 * **required file URL**: TEMPLATE_DIR/plugins/aspexi-facebook-like-box/images/aspexi-fb-custom.png
 
@@ -83,6 +84,12 @@ Yes. Just create your file and copy it to your current theme (or child) director
 
 == Changelog ==
 
+= 1.2.0 =
+* disable on small screens option added
+* better WP compatibility
+* fix for PHP older than 5.3
+* readme update
+
 = 1.1.0 =
 * Custom Facebook button file available (see FAQ)
 * Admin URL fix
@@ -93,8 +100,11 @@ Yes. Just create your file and copy it to your current theme (or child) director
 
 == Upgrade Notice ==
 
+= 1.2.0 =
+New options added. No action required.
+
 = 1.1.0 =
-New configuration. Default values of previous version are preserved.
+New options. Default values of previous version are preserved.
 
 = 1.0.0 =
 Initial release, no upgrade available.

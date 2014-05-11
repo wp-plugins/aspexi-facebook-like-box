@@ -2,9 +2,9 @@
 /*
 Plugin Name: Aspexi Facebook Like Box
 Plugin URI:  http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=free_plugin
-Description: Plugin adds facebook like box slide on hover.
+Description: Plugin adds fancy Facebook Like Box slider.
 Author: Aspexi
-Version: 1.1.0
+Version: 1.2.0
 Author URI: http://aspexi.com/
 License: GPLv2 or later
 
@@ -24,7 +24,8 @@ defined('ABSPATH') or exit();
 
 if ( !class_exists( 'AspexiFBlikebox' ) ) {
 
-    define('ASPEXIFBLIKEBOX_VERSION', '1.1.0');
+    define('ASPEXIFBLIKEBOX_VERSION', '1.2.0');
+    define('ASPEXIFBLIKEBOX_URL', plugins_url() . '/aspexi-facebook-like-box/');
 
     class AspexiFBlikebox {
 
@@ -86,8 +87,12 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                         $this->cf['status'] = 'enabled';
                         $this->cf['aspexifblikebox_version'] = ASPEXIFBLIKEBOX_VERSION;
                         update_option( 'aspexifblikebox_options',  $this->cf, '', 'yes' );
-                    break;
-                }
+                   break;
+                   default:
+                        $this->cf = array_merge( $cf_default, (array)$this->cf );
+                        $this->cf['aspexifblikebox_version'] = ASPEXIFBLIKEBOX_VERSION;
+                        update_option( 'aspexifblikebox_options',  $this->cf, '', 'yes' );
+               }
             }
         }
 
@@ -373,13 +378,13 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Button Image', 'aspexifblikebox'); ?></th>
-                                                <td><span><input type="radio" name="afblb_btimage" value="fb1-right" checked disabled />&nbsp;<img src="<?php echo plugins_url().'/'.basename( __DIR__ ).'/images/fb1-right.png'; ?>" alt="" style="cursor:pointer;" /></span>
-                                                <span><input type="radio" name="afblb_btimage" value="" disabled />&nbsp;<img src="<?php echo plugins_url().'/'.basename( __DIR__ ).'/images/preview-buttons.jpg'; ?>" alt="" style="cursor:pointer;" /></span><?php echo $this->get_pro_link(); ?>
+                                                <td><span><input type="radio" name="afblb_btimage" value="fb1-right" checked disabled />&nbsp;<img src="<?php echo ASPEXIFBLIKEBOX_URL.'images/fb1-right.png'; ?>" alt="" style="cursor:pointer;" /></span>
+                                                <span><input type="radio" name="afblb_btimage" value="" disabled />&nbsp;<img src="<?php echo ASPEXIFBLIKEBOX_URL.'images/preview-buttons.jpg'; ?>" alt="" style="cursor:pointer;" /></span><?php echo $this->get_pro_link(); ?>
                                                 </td>
                                             </tr>   
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('High Resolution', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('Use SVG high quality images instead of PNG if possible. Recommended for Retina displays (iPhone, iPad, MacBook Pro).', 'aspexifblikebox'); ?></span></th>
-                                                <td><input type="checkbox" value="on" name="afblb_bthq" disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="checkbox" value="on" name="afblb_bthq" disabled />&nbsp;<img src="<?php echo ASPEXIFBLIKEBOX_URL.'images/svgonoff.png'; ?>" alt="" style="cursor:pointer;" /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>                              
                                         </tbody>
                                     </table>
@@ -443,7 +448,11 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                                                 <td><?php _e('Parameter', 'aspexifblikebox'); ?>:&nbsp;<input type="text" name="afblb_disableparam" value="" size="6" disabled /><br />
                                                     <?php _e('Value', 'aspexifblikebox'); ?>:&nbsp;<input type="text" name="afblb_disableval" value="" size="6" disabled /><?php echo $this->get_pro_link(); ?>
                                                 </td>
-                                            </tr>                        
+                                            </tr>  
+                                            <tr valign="top">
+                                                <th scope="row"><?php _e('Disable on Small Screens', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('Dynamically hide the plugin if screen size is smaller than like box size (CSS media query)', 'aspexifblikebox'); ?></span></th>
+                                                <td><input type="checkbox" value="on" name="afblb_smallscreens" checked disabled /><?php echo $this->get_pro_link(); ?></td>
+                                            </tr>                       
                                         </tbody>
                                     </table>
                                     </div>
@@ -485,7 +494,7 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                                 <h3><span>Made by</span></h3>   
                                 <div class="inside">
                                     <div style="width: 170px; margin: 0 auto;">
-                                        <a href="http://aspexi.com/" target="_blank"><img src="<?php echo plugins_url().'/'.basename( __DIR__ ).'/images/aspexi300.png'; ?>" alt="" border="0" width="150" /></a>
+                                        <a href="<?php echo $this->get_pro_url(); ?>" target="_blank"><img src="<?php echo ASPEXIFBLIKEBOX_URL.'images/aspexi300.png'; ?>" alt="" border="0" width="150" /></a>
                                     </div>
                                 </div>
                             </div>   
@@ -501,10 +510,14 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
             }
         }
 
+        public function get_pro_url() {
+            return 'http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=free_plugin';
+        }
+
         public function get_pro_link() {
             $ret = '';
 
-            $ret .= '&nbsp;&nbsp;&nbsp;<a href="http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=free_plugin" target="_blank">Get PRO version</a>';
+            $ret .= '&nbsp;&nbsp;&nbsp;<a href="'.$this->get_pro_url().'" target="_blank">'.__( 'Get PRO version', 'aspexifblikebox' ).'</a>';
 
             return $ret;
         }
@@ -540,6 +553,12 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
 
             $css_placement[2] = '50%;margin-top:-'.floor($height/2).'px';
 
+			$smallscreenscss = '';
+            if( $width > 0 ) {
+                $widthmax = (int)($width + 48 + $borderwidth + 10);
+                $smallscreenscss = '@media (max-width: '.$widthmax.'px) { .aspexifblikebox { display: none; } }';
+            }
+
             $stream     = 'false';
             $header     = 'false';
 
@@ -555,17 +574,17 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
             elseif( file_exists( $users_button_template ) )
                 $button_uri = get_template_directory_uri() . $users_button_custom;
             elseif( file_exists( plugin_dir_path( __FILE__ ).'images/'.$btimage ) )
-                $button_uri = plugins_url().'/'.basename( __DIR__ ).'/images/'.$btimage;
+                $button_uri = ASPEXIFBLIKEBOX_URL.'images/'.$btimage;
 
             if( '' == $button_uri ) {
-                $button_uri = plugins_url().'/'.basename( __DIR__ ).'/images/fb1-right.png';
+                $button_uri = ASPEXIFBLIKEBOX_URL.'images/fb1-right.png';
             }
 
             $button_uri  = apply_filters( 'aspexifblikebox_button_uri', $button_uri );
             
             $output = '';
 
-            $output .= '<style type="text/css"> .aspexifblikebox{box-sizing: content-box;-webkit-box-sizing: content-box;-moz-box-sizing: content-box;background: url("'.$button_uri.'") no-repeat scroll '.$css_placement[0].' '.$css_placement[3].' transparent;'.$css_placement[4].' float: '.$placement.';height: '.$height.'px;padding: '.$css_placement[1].';width: '.$width.'px;z-index:  99999;position:fixed;'.$placement.':-'.($width+5).'px;top:'.$css_placement[2].';cursor:pointer;} .aspexifblikebox div{ padding: 0; margin-'.$placement.':-8px; border:'.$borderwidth.'px solid '.$bordercolor.'; background:'.$bgcolor.';} .aspexifblikebox span{bottom: 4px;font: 8px "lucida grande",tahoma,verdana,arial,sans-serif;position: absolute;'.$placement.': 6px;text-align: '.$placement.';z-index: 99999;} .aspexifblikebox span a{color: gray;text-decoration:none;} .aspexifblikebox span a:hover{text-decoration:underline;} } </style><div class="aspexifblikebox"><div><iframe src="http://www.facebook.com/plugins/likebox.php?locale='.$locale.'&href=http%3A%2F%2Ffacebook.com%2F'.$url.'&amp;width='.$width.'&amp;colorscheme=light&amp;connections=0&amp;show_border=false&amp;border_color=white&amp;header='.$header.'&amp;height='.$height.'" scrolling="no" frameborder="0" scrolling="no" style="border: white; overflow: hidden; height: '.$height.'px; width: '.$width.'px;background:'.$bgcolor.';"></iframe></div> </div>';
+            $output .= '<style type="text/css">'.$smallscreenscss.' .aspexifblikebox{box-sizing: content-box;-webkit-box-sizing: content-box;-moz-box-sizing: content-box;background: url("'.$button_uri.'") no-repeat scroll '.$css_placement[0].' '.$css_placement[3].' transparent;'.$css_placement[4].' float: '.$placement.';height: '.$height.'px;padding: '.$css_placement[1].';width: '.$width.'px;z-index:  99999;position:fixed;'.$placement.':-'.($width+5).'px;top:'.$css_placement[2].';cursor:pointer;} .aspexifblikebox div{ padding: 0; margin-'.$placement.':-8px; border:'.$borderwidth.'px solid '.$bordercolor.'; background:'.$bgcolor.';} .aspexifblikebox span{bottom: 4px;font: 8px "lucida grande",tahoma,verdana,arial,sans-serif;position: absolute;'.$placement.': 6px;text-align: '.$placement.';z-index: 99999;} .aspexifblikebox span a{color: gray;text-decoration:none;} .aspexifblikebox span a:hover{text-decoration:underline;} } </style><div class="aspexifblikebox"><div><iframe src="http://www.facebook.com/plugins/likebox.php?locale='.$locale.'&href=http%3A%2F%2Ffacebook.com%2F'.$url.'&amp;width='.$width.'&amp;colorscheme=light&amp;connections=0&amp;show_border=false&amp;border_color=white&amp;header='.$header.'&amp;height='.$height.'" scrolling="no" frameborder="0" scrolling="no" style="border: white; overflow: hidden; height: '.$height.'px; width: '.$width.'px;background:'.$bgcolor.';"></iframe></div> </div>';
 
             $output = apply_filters( 'aspexifblikebox_output', $output );
 
@@ -577,7 +596,7 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
             $placement  = 'right';
             $slideon    = 'hover';
 
-            wp_enqueue_script( 'aspexi-facebook-like-box', plugins_url( basename( __DIR__ ) . '/js/aflb.js' ), array( 'jquery' ), false, true );
+            wp_enqueue_script( 'aspexi-facebook-like-box', ASPEXIFBLIKEBOX_URL . 'js/aflb.js', array( 'jquery' ), false, true );
             wp_localize_script( 'aspexi-facebook-like-box', 'aflb', array(
                     'slideon'   => $slideon,
                     'placement' => $placement,

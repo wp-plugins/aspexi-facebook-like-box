@@ -6,7 +6,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dryja
 Tags: facebook, likebox, like box, floating, button, slider, facebook likebox, facebook like box, facebook slider, facebook buttons
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,7 @@ Plugin adds fancy Facebook Like Box slider (slide on hover).
 * **iPhone / iPad** compatible
 * **High resolution** buttons (SVG files included)
 * 8 amazing original icons / buttons
+* **qTranslate compatible**
 * On / off for mobile
 * http or https option
 * Button placement customization
@@ -50,7 +51,15 @@ Plugin adds fancy Facebook Like Box slider (slide on hover).
 * Set slide time
 * Disable on small screens
 * **1-Year upgrades &amp; support**
+* 30-Day Money-Back Guarantee
 * [Get Premium version](http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=plugin_page)
+
+####Requirements####
+
+* no JS errors
+* always keep your Wordpress core up-to-date
+
+Proudly Developed in London, UK.
 
 == Installation ==
 
@@ -84,11 +93,14 @@ Yes. Simply create your file and copy it to your current theme (or child) direct
 
 == Changelog ==
 
+= 1.2.1 =
+* Minor fixes
+
 = 1.2.0 =
-* disable on small screens option added
-* better WP compatibility
-* fix for PHP older than 5.3
-* readme update
+* Disable on small screens option added
+* Better WP compatibility
+* Fix for PHP older than 5.3
+* Readme update
 
 = 1.1.0 =
 * Custom Facebook button file available (see FAQ)
@@ -99,6 +111,9 @@ Yes. Simply create your file and copy it to your current theme (or child) direct
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+No action required.
 
 = 1.2.0 =
 New options added. No action required.

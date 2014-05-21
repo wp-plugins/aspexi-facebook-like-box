@@ -4,7 +4,7 @@ Plugin Name: Aspexi Facebook Like Box
 Plugin URI:  http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=free_plugin
 Description: Plugin adds fancy Facebook Like Box slider.
 Author: Aspexi
-Version: 1.2.0
+Version: 1.2.1
 Author URI: http://aspexi.com/
 License: GPLv2 or later
 
@@ -24,7 +24,7 @@ defined('ABSPATH') or exit();
 
 if ( !class_exists( 'AspexiFBlikebox' ) ) {
 
-    define('ASPEXIFBLIKEBOX_VERSION', '1.2.0');
+    define('ASPEXIFBLIKEBOX_VERSION', '1.2.1');
     define('ASPEXIFBLIKEBOX_URL', plugins_url() . '/aspexi-facebook-like-box/');
 
     class AspexiFBlikebox {
@@ -140,6 +140,8 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
             if (!current_user_can('manage_options')) {
                 wp_die(__('You do not have sufficient permissions to access this page.'));
             }
+
+            $preview = false;
 
             // request action
             if ( isset( $_REQUEST['afblb_form_submit'] ) && check_admin_referer( plugin_basename(__FILE__), 'afblb_nonce_name' ) ) {

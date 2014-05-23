@@ -52,14 +52,16 @@ Plugin adds fancy Facebook Like Box slider (slide on hover).
 * Disable on small screens
 * **1-Year upgrades &amp; support**
 * 30-Day Money-Back Guarantee
-* [Get Premium version](http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=plugin_page)
+* **[Get Premium version](http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=plugin_page)**
 
 ####Requirements####
 
 * no JS errors
 * always keep your Wordpress core up-to-date
 
-Proudly Developed in London, UK.
+Translation included: English, Polish
+
+Proudly Developed in **London**, UK.
 
 == Installation ==
 

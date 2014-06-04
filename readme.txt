@@ -57,6 +57,7 @@ Plugin adds fancy Facebook Like Box slider (slide on hover).
 ####Requirements####
 
 * no JS errors
+* Facebook page has to be published and available to all users (to avoid blank box)
 * always keep your Wordpress core up-to-date
 
 Translation included: English, Polish
@@ -74,6 +75,10 @@ Premium version only:
 Put license code from confirmation email into plugin configuration and click Activate License
 
 == Frequently Asked Questions ==
+
+= I see blank box, why is that? =
+
+Double check if your Facebook page is published and available to all users.
 
 = Where do I find settings page in Admin? =
 

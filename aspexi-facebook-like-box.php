@@ -4,7 +4,7 @@ Plugin Name: Aspexi Facebook Like Box
 Plugin URI:  http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=free_plugin
 Description: Plugin adds fancy Facebook Like Box slider.
 Author: Aspexi
-Version: 1.2.1
+Version: 1.2.2
 Author URI: http://aspexi.com/
 License: GPLv2 or later
 
@@ -24,7 +24,7 @@ defined('ABSPATH') or exit();
 
 if ( !class_exists( 'AspexiFBlikebox' ) ) {
 
-    define('ASPEXIFBLIKEBOX_VERSION', '1.2.1');
+    define('ASPEXIFBLIKEBOX_VERSION', '1.2.2');
     define('ASPEXIFBLIKEBOX_URL', plugins_url() . '/aspexi-facebook-like-box/');
 
     class AspexiFBlikebox {
@@ -161,7 +161,7 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                     $this->add_message( __( 'Settings saved.', 'aspexifblikebox' ) );
 
                     // Preview maybe
-                    if( $_REQUEST['preview'] )
+                    if( @$_REQUEST['preview'] )
                         $preview = true;
                     else
                         $preview = false;  
@@ -586,7 +586,7 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
             
             $output = '';
 
-            $output .= '<style type="text/css">'.$smallscreenscss.' .aspexifblikebox{box-sizing: content-box;-webkit-box-sizing: content-box;-moz-box-sizing: content-box;background: url("'.$button_uri.'") no-repeat scroll '.$css_placement[0].' '.$css_placement[3].' transparent;'.$css_placement[4].' float: '.$placement.';height: '.$height.'px;padding: '.$css_placement[1].';width: '.$width.'px;z-index:  99999;position:fixed;'.$placement.':-'.($width+5).'px;top:'.$css_placement[2].';cursor:pointer;} .aspexifblikebox div{ padding: 0; margin-'.$placement.':-8px; border:'.$borderwidth.'px solid '.$bordercolor.'; background:'.$bgcolor.';} .aspexifblikebox span{bottom: 4px;font: 8px "lucida grande",tahoma,verdana,arial,sans-serif;position: absolute;'.$placement.': 6px;text-align: '.$placement.';z-index: 99999;} .aspexifblikebox span a{color: gray;text-decoration:none;} .aspexifblikebox span a:hover{text-decoration:underline;} } </style><div class="aspexifblikebox"><div><iframe src="http://www.facebook.com/plugins/likebox.php?locale='.$locale.'&href=http%3A%2F%2Ffacebook.com%2F'.$url.'&amp;width='.$width.'&amp;colorscheme=light&amp;connections=0&amp;show_border=false&amp;border_color=white&amp;header='.$header.'&amp;height='.$height.'" scrolling="no" frameborder="0" scrolling="no" style="border: white; overflow: hidden; height: '.$height.'px; width: '.$width.'px;background:'.$bgcolor.';"></iframe></div> </div>';
+            $output .= '<style type="text/css">'.$smallscreenscss.' .aspexifblikebox{box-sizing: content-box;-webkit-box-sizing: content-box;-moz-box-sizing: content-box;background: url("'.$button_uri.'") no-repeat scroll '.$css_placement[0].' transparent; float: '.$placement.';height: '.$height.'px;padding: '.$css_placement[1].';width: '.$width.'px;z-index:  99999;position:fixed;'.$placement.':-'.($width+5).'px;top:'.$css_placement[2].';cursor:pointer;} .aspexifblikebox div{ padding: 0; margin-'.$placement.':-8px; border:'.$borderwidth.'px solid '.$bordercolor.'; background:'.$bgcolor.';} .aspexifblikebox span{bottom: 4px;font: 8px "lucida grande",tahoma,verdana,arial,sans-serif;position: absolute;'.$placement.': 6px;text-align: '.$placement.';z-index: 99999;} .aspexifblikebox span a{color: gray;text-decoration:none;} .aspexifblikebox span a:hover{text-decoration:underline;} } </style><div class="aspexifblikebox"><div><iframe src="http://www.facebook.com/plugins/likebox.php?locale='.$locale.'&href=http%3A%2F%2Ffacebook.com%2F'.$url.'&amp;width='.$width.'&amp;colorscheme=light&amp;connections=0&amp;show_border=false&amp;border_color=white&amp;header='.$header.'&amp;height='.$height.'" scrolling="no" frameborder="0" scrolling="no" style="border: white; overflow: hidden; height: '.$height.'px; width: '.$width.'px;background:'.$bgcolor.';"></iframe></div> </div>';
 
             $output = apply_filters( 'aspexifblikebox_output', $output );
 

@@ -68,7 +68,7 @@ Proudly Developed in **London**, UK.
 
 1. Upload `aspexi-facebook-like-box` directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Configure plugin
+3. Configure plugin (Appearance -> Facebook Like Box)
 
 Premium version only:
 

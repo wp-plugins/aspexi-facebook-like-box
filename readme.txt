@@ -70,9 +70,10 @@ Proudly Developed in **London**, UK.
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Configure plugin (Appearance -> Facebook Like Box)
 
-Premium version only:
+[Premium version only](http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=plugin_page):
 
-Put license code from confirmation email into plugin configuration and click Activate License
+* Remove plugin's free version before install premium version
+* Put license code from confirmation email into plugin configuration and click Activate License
 
 == Frequently Asked Questions ==
 

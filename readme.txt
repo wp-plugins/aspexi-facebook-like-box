@@ -64,6 +64,8 @@ Translation included: English, Polish
 
 Proudly Developed in **London**, UK.
 
+Facebook Likebox Wordpress Plugin premium version is [available here](http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=plugin_page).
+
 == Installation ==
 
 1. Upload `aspexi-facebook-like-box` directory to the `/wp-content/plugins/` directory

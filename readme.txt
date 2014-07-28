@@ -60,7 +60,7 @@ Plugin adds fancy Facebook Like Box slider (slide on hover).
 * Facebook page has to be published and available to all users (to avoid blank box)
 * always keep your Wordpress core up-to-date
 
-####About Aspexi####
+####About Aspexi Ltd.####
 
 We are a team of Wordpress professionals keen to deliver highest quality websites, plugins and other development services.
 

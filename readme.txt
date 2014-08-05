@@ -70,6 +70,8 @@ Proudly Developed in **London**, UK.
 
 Facebook Likebox Wordpress Plugin premium version is [available here](http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=plugin_page).
 
+See also [Facebook Likebox Sidebox](http://wordpress.org/plugins/aspexi-facebook-like-box-sidebox/) plugin.
+
 == Installation ==
 
 1. Upload `aspexi-facebook-like-box` directory to the `/wp-content/plugins/` directory

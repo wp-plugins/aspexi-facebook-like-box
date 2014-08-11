@@ -14,7 +14,7 @@ Plugin adds fancy Facebook Like Box slider (slide on hover).
 
 == Description ==
 
-Plugin adds fancy Facebook Like Box slider (slide on hover).
+Plugin adds fancy Facebook Like Box slider (slide on hover (or click - premium version only)).
 
 ####Free version####
 

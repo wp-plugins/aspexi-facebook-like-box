@@ -164,8 +164,8 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                     if( @$_REQUEST['preview'] )
                         $preview = true;
                     else
-                        $preview = false;  
-                }   
+                        $preview = false;
+                }
             }
 
             // Locale
@@ -311,7 +311,7 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                                                     <option value="enabled"<?php if( 'enabled' == $this->cf['status'] ) echo ' selected="selected"'; ?>><?php _e('enabled', 'aspexifblikebox'); ?></option>
                                                     <option value="disabled"<?php if( 'disabled' == $this->cf['status'] ) echo ' selected="selected"'; ?>><?php _e('disabled', 'aspexifblikebox'); ?></option>
                                                     </select></td>
-                                            </tr>                                        
+                                            </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Facebook Page URL', 'aspexifblikebox'); ?></strong></th>
                                                 <td>http://www.facebook.com/&nbsp;<input type="text" name="afblb_url" value="<?php echo $this->cf['url']; ?>" />
@@ -349,10 +349,8 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                                                 <th scope="row"><?php _e('Localization', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('Change might not be visible immediately due to Facebook / browser cache', 'aspexifblikebox'); ?></span></th>
                                                 <td><?php echo $locales_input; ?></td>
                                             </tr>
-                                                                                       
                                         </tbody>
                                     </table>
-                                                                           
                                     </div>
                                 </div>
 
@@ -387,7 +385,7 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('High Resolution', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('Use SVG high quality images instead of PNG if possible. Recommended for Retina displays (iPhone, iPad, MacBook Pro).', 'aspexifblikebox'); ?></span></th>
                                                 <td><input type="checkbox" value="on" name="afblb_bthq" disabled />&nbsp;<img src="<?php echo ASPEXIFBLIKEBOX_URL.'images/svgonoff.png'; ?>" alt="" style="cursor:pointer;" /><?php echo $this->get_pro_link(); ?></td>
-                                            </tr>                              
+                                            </tr>
                                         </tbody>
                                     </table>
                                     </div>

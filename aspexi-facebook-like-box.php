@@ -4,7 +4,7 @@ Plugin Name: Aspexi Facebook Like Box
 Plugin URI:  http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=free_plugin
 Description: Plugin adds fancy Facebook Like Box slider.
 Author: Aspexi
-Version: 1.2.2
+Version: 1.2.3
 Author URI: http://aspexi.com/
 License: GPLv2 or later
 
@@ -24,7 +24,7 @@ defined('ABSPATH') or exit();
 
 if ( !class_exists( 'AspexiFBlikebox' ) ) {
 
-    define('ASPEXIFBLIKEBOX_VERSION', '1.2.2');
+    define('ASPEXIFBLIKEBOX_VERSION', '1.2.3');
     define('ASPEXIFBLIKEBOX_URL', plugins_url() . '/aspexi-facebook-like-box/');
 
     class AspexiFBlikebox {
@@ -52,6 +52,9 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
 
             /* Internationalization */
             load_plugin_textdomain( 'aspexifblikebox', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
+            /* Exras */
+            $this->extras_init();
         }
 
         public function settings() {
@@ -164,8 +167,8 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                     if( @$_REQUEST['preview'] )
                         $preview = true;
                     else
-                        $preview = false;
-                }
+                        $preview = false;  
+                }   
             }
 
             // Locale
@@ -311,7 +314,7 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                                                     <option value="enabled"<?php if( 'enabled' == $this->cf['status'] ) echo ' selected="selected"'; ?>><?php _e('enabled', 'aspexifblikebox'); ?></option>
                                                     <option value="disabled"<?php if( 'disabled' == $this->cf['status'] ) echo ' selected="selected"'; ?>><?php _e('disabled', 'aspexifblikebox'); ?></option>
                                                     </select></td>
-                                            </tr>
+                                            </tr>                                        
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Facebook Page URL', 'aspexifblikebox'); ?></strong></th>
                                                 <td>http://www.facebook.com/&nbsp;<input type="text" name="afblb_url" value="<?php echo $this->cf['url']; ?>" />
@@ -319,38 +322,42 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Like Box Height', 'aspexifblikebox'); ?></th>
-                                                <td><input type="text" name="afblb_height" value="285" size="3" disabled />&nbsp;px<?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="text" name="afblb_height" value="285" size="3" disabled readonly />&nbsp;px<?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Like Box Width', 'aspexifblikebox'); ?></th>
-                                                <td><input type="text" name="afblb_width" value="245" size="3" disabled />&nbsp;px<?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="text" name="afblb_width" value="245" size="3" disabled readonly />&nbsp;px<?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Show Friends\' Faces', 'aspexifblikebox'); ?></th>
-                                                <td><input type="checkbox" value="on" name="afblb_faces" checked disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="checkbox" value="on" name="afblb_faces" checked disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Number of Connections', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('For auto generated number of connection set 0', 'aspexifblikebox'); ?></span></th>
-                                                <td><input type="text" name="afblb_faces_count" value="0" size="3" disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="text" name="afblb_faces_count" value="0" size="3" disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Show Posts (Stream)', 'aspexifblikebox'); ?></th>
-                                                <td><input type="checkbox" value="on" name="afblb_stream" disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="checkbox" value="on" name="afblb_stream" disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Force Wall', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('For "place" Pages (Pages that have a physical location that can be used with check-ins), this specifies whether the stream contains posts by the Page or just check-ins from friends.', 'aspexifblikebox'); ?></span></th>
-                                                <td><input type="checkbox" value="on" name="afblb_wall" disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="checkbox" value="on" name="afblb_wall" disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Header', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('Specifies whether to display the Facebook header at the top of the plugin.', 'aspexifblikebox'); ?></span></th>
-                                                <td><input type="checkbox" value="on" name="afblb_header" disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="checkbox" value="on" name="afblb_header" disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Localization', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('Change might not be visible immediately due to Facebook / browser cache', 'aspexifblikebox'); ?></span></th>
                                                 <td><?php echo $locales_input; ?></td>
                                             </tr>
+                                            <?php
+                                            echo apply_filters('aspexifblikebox_admin_settings', '');
+                                            ?>                                           
                                         </tbody>
                                     </table>
+                                                                           
                                     </div>
                                 </div>
 
@@ -365,27 +372,27 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                                         <tbody>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Button Space', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('Space between button and page edge', 'aspexifblikebox'); ?></span></th>
-                                                <td><input type="text" name="afblb_btspace" value="0" size="3" disabled />&nbsp;px<?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="text" name="afblb_btspace" value="0" size="3" disabled readonly />&nbsp;px<?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Button Placement', 'aspexifblikebox'); ?></th>
-                                                <td><input type="radio" name="afblb_btvertical" value="top" disabled />&nbsp;<?php _e('top','aspexifblikebox'); ?><br />
-                                                    <input type="radio" name="afblb_btvertical" value="middle" checked disabled />&nbsp;<?php _e('middle','aspexifblikebox'); ?><br />
-                                                    <input type="radio" name="afblb_btvertical" value="bottom" disabled />&nbsp;<?php _e('bottom','aspexifblikebox'); ?><br />
-                                                    <input type="radio" name="afblb_btvertical" value="fixed" disabled />&nbsp;<?php _e('fixed','aspexifblikebox'); ?>
-                                                    <input type="text" name="afblb_btvertical_val" value="" size="3" disabled />&nbsp;px <?php _e('from slider top','aspexifblikebox'); ?><?php echo $this->get_pro_link(); ?>
+                                                <td><input type="radio" name="afblb_btvertical" value="top" disabled readonly />&nbsp;<?php _e('top','aspexifblikebox'); ?><br />
+                                                    <input type="radio" name="afblb_btvertical" value="middle" checked disabled readonly />&nbsp;<?php _e('middle','aspexifblikebox'); ?><br />
+                                                    <input type="radio" name="afblb_btvertical" value="bottom" disabled readonly />&nbsp;<?php _e('bottom','aspexifblikebox'); ?><br />
+                                                    <input type="radio" name="afblb_btvertical" value="fixed" disabled readonly />&nbsp;<?php _e('fixed','aspexifblikebox'); ?>
+                                                    <input type="text" name="afblb_btvertical_val" value="" size="3" disabled readonly />&nbsp;px <?php _e('from slider top','aspexifblikebox'); ?><?php echo $this->get_pro_link(); ?>
                                                     </td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Button Image', 'aspexifblikebox'); ?></th>
-                                                <td><span><input type="radio" name="afblb_btimage" value="fb1-right" checked disabled />&nbsp;<img src="<?php echo ASPEXIFBLIKEBOX_URL.'images/fb1-right.png'; ?>" alt="" style="cursor:pointer;" /></span>
-                                                <span><input type="radio" name="afblb_btimage" value="" disabled />&nbsp;<img src="<?php echo ASPEXIFBLIKEBOX_URL.'images/preview-buttons.jpg'; ?>" alt="" style="cursor:pointer;" /></span><?php echo $this->get_pro_link(); ?>
+                                                <td><span><input type="radio" name="afblb_btimage" value="fb1-right" checked disabled readonly />&nbsp;<img src="<?php echo ASPEXIFBLIKEBOX_URL.'images/fb1-right.png'; ?>" alt="" style="cursor:pointer;" /></span>
+                                                <span><input type="radio" name="afblb_btimage" value="" disabled readonly />&nbsp;<img src="<?php echo ASPEXIFBLIKEBOX_URL.'images/preview-buttons.jpg'; ?>" alt="" style="cursor:pointer;" /></span><?php echo $this->get_pro_link(); ?>
                                                 </td>
                                             </tr>   
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('High Resolution', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('Use SVG high quality images instead of PNG if possible. Recommended for Retina displays (iPhone, iPad, MacBook Pro).', 'aspexifblikebox'); ?></span></th>
-                                                <td><input type="checkbox" value="on" name="afblb_bthq" disabled />&nbsp;<img src="<?php echo ASPEXIFBLIKEBOX_URL.'images/svgonoff.png'; ?>" alt="" style="cursor:pointer;" /><?php echo $this->get_pro_link(); ?></td>
-                                            </tr>
+                                                <td><input type="checkbox" value="on" name="afblb_bthq" disabled readonly />&nbsp;<img src="<?php echo ASPEXIFBLIKEBOX_URL.'images/svgonoff.png'; ?>" alt="" style="cursor:pointer;" /><?php echo $this->get_pro_link(); ?></td>
+                                            </tr>                              
                                         </tbody>
                                     </table>
                                     </div>
@@ -401,57 +408,61 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                                         <tbody>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Placement', 'aspexifblikebox'); ?></th>
-                                                <td><select name="afblb_placement" disabled>
+                                                <td><select name="afblb_placement" disabled readonly>
                                                     <option value="left"><?php _e('left', 'aspexifblikebox'); ?></option>
                                                     <option value="right" selected="selected"><?php _e('right', 'aspexifblikebox'); ?></option>
                                                     </select><?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Vertical placement', 'aspexifblikebox'); ?></th>
-                                                <td><input type="radio" name="afblb_vertical" value="middle" checked disabled />&nbsp;<?php _e('center','aspexifblikebox'); ?><br />
-                                                    <input type="radio" name="afblb_vertical" value="fixed" disabled />&nbsp;<?php _e('fixed','aspexifblikebox'); ?>
-                                                    <input type="text" name="afblb_vertical_val" value="" size="3" disabled />&nbsp;px <?php _e('from page top','aspexifblikebox'); ?><?php echo $this->get_pro_link(); ?>
+                                                <td><input type="radio" name="afblb_vertical" value="middle" checked disabled readonly />&nbsp;<?php _e('center','aspexifblikebox'); ?><br />
+                                                    <input type="radio" name="afblb_vertical" value="fixed" disabled readonly />&nbsp;<?php _e('fixed','aspexifblikebox'); ?>
+                                                    <input type="text" name="afblb_vertical_val" value="" size="3" disabled readonly />&nbsp;px <?php _e('from page top','aspexifblikebox'); ?><?php echo $this->get_pro_link(); ?>
                                                 </td>
                                             </tr>    
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Color Scheme', 'aspexifblikebox'); ?></th>
-                                                <td><select name="afblb_colorscheme" disabled>
+                                                <td><select name="afblb_colorscheme" disabled readonly>
                                                     <option value="light" selected="selected"><?php _e('light', 'aspexifblikebox'); ?></option>
                                                     <option value="dark"><?php _e('dark', 'aspexifblikebox'); ?></option>
                                                     </select><?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Border Color', 'aspexifblikebox'); ?></th>
-                                                <td><input type="text" name="afblb_bordercolor" class="bordercolor-field" value="#3B5998" size="6" disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="text" name="afblb_bordercolor" class="bordercolor-field" value="#3B5998" size="6" disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>    
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Border Width', 'aspexifblikebox'); ?></th>
-                                                <td><input type="text" name="afblb_borderwidth" value="2" size="3" disabled />&nbsp;px<?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="text" name="afblb_borderwidth" value="2" size="3" disabled readonly />&nbsp;px<?php echo $this->get_pro_link(); ?></td>
                                             </tr>   
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Background Color', 'aspexifblikebox'); ?></th>
-                                                <td><input type="text" name="afblb_bgcolor" class="bgcolor-field" value="#FFFFFF" size="6" disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="text" name="afblb_bgcolor" class="bgcolor-field" value="#FFFFFF" size="6" disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Slide on Mouse', 'aspexifblikebox'); ?></th>
-                                                <td><select name="afblb_slideon" disabled>
+                                                <td><select name="afblb_slideon" disabled readonly>
                                                     <option value="hover" selected="selected"><?php _e('hover', 'aspexifblikebox'); ?></option>
                                                     <option value="click"><?php _e('click', 'aspexifblikebox'); ?></option>
                                                     </select><?php echo $this->get_pro_link(); ?></td>
                                             </tr>   
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Slide Time', 'aspexifblikebox'); ?></th>
-                                                <td><input type="text" name="afblb_slidetime" value="400" size="3" disabled />&nbsp;<?php _e('milliseconds', 'aspexifblikebox'); ?><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="text" name="afblb_slidetime" value="400" size="3" disabled readonly />&nbsp;<?php _e('milliseconds', 'aspexifblikebox'); ?><?php echo $this->get_pro_link(); ?></td>
+                                            </tr>
+                                            <tr valign="top">
+                                                <th scope="row"><?php _e('Delay FB content load', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('Checking this box will prevent from loading the facebook content while loading the whole page. With this box checked the page will load faster, but facebook content may appear a bit later while opening the box for the first time.', 'aspexifbsidebox'); ?></span></th>
+                                                <td><input type="checkbox" value="on" name="afbsb_async" disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Disable on GET', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('Example: set Parameter=iframe and Value=true. Like Box will be disabled on all URLs like yourwebsite.com/?iframe=true.', 'aspexifblikebox'); ?></span></th>
-                                                <td><?php _e('Parameter', 'aspexifblikebox'); ?>:&nbsp;<input type="text" name="afblb_disableparam" value="" size="6" disabled /><br />
-                                                    <?php _e('Value', 'aspexifblikebox'); ?>:&nbsp;<input type="text" name="afblb_disableval" value="" size="6" disabled /><?php echo $this->get_pro_link(); ?>
+                                                <td><?php _e('Parameter', 'aspexifblikebox'); ?>:&nbsp;<input type="text" name="afblb_disableparam" value="" size="6" disabled readonly /><br />
+                                                    <?php _e('Value', 'aspexifblikebox'); ?>:&nbsp;<input type="text" name="afblb_disableval" value="" size="6" disabled readonly /><?php echo $this->get_pro_link(); ?>
                                                 </td>
                                             </tr>  
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Disable on Small Screens', 'aspexifblikebox'); ?><br /><span style="font-size: 10px"><?php _e('Dynamically hide the plugin if screen size is smaller than like box size (CSS media query)', 'aspexifblikebox'); ?></span></th>
-                                                <td><input type="checkbox" value="on" name="afblb_smallscreens" checked disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="checkbox" value="on" name="afblb_smallscreens" checked disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>                       
                                         </tbody>
                                     </table>
@@ -468,19 +479,19 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
                                         <tbody>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('iPad & iPod', 'aspexifblikebox'); ?></th>
-                                                <td><input type="checkbox" value="on" name="afblb_edipad" checked disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="checkbox" value="on" name="afblb_edipad" checked disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                              <tr valign="top">
                                                 <th scope="row"><?php _e('iPhone', 'aspexifblikebox'); ?></th>
-                                                <td><input type="checkbox" value="on" name="afblb_ediphone" checked disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="checkbox" value="on" name="afblb_ediphone" checked disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Android', 'aspexifblikebox'); ?></th>
-                                                <td><input type="checkbox" value="on" name="afblb_edandroid" checked disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="checkbox" value="on" name="afblb_edandroid" checked disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>
                                             <tr valign="top">
                                                 <th scope="row"><?php _e('Other Mobile Devices', 'aspexifblikebox'); ?></th>
-                                                <td><input type="checkbox" value="on" name="afblb_edothers" checked disabled /><?php echo $this->get_pro_link(); ?></td>
+                                                <td><input type="checkbox" value="on" name="afblb_edothers" checked disabled readonly /><?php echo $this->get_pro_link(); ?></td>
                                             </tr>                         
                                         </tbody>
                                     </table>
@@ -625,6 +636,42 @@ if ( !class_exists( 'AspexiFBlikebox' ) ) {
         public function admin_scripts() {
             // premium only
             return;
+        }
+        
+        public function extras_init() {
+            /* qTranslate */
+            add_filter( 'aspexifblikebox_admin_settings', array( &$this, 'extras_qtranslate_admin' ) );
+            add_filter( 'aspexifblikebox_admin_settings', array( &$this, 'extras_polylang_admin' ) );
+        }
+        
+        public function extras_qtranslate_detect() {
+            global $q_config;
+            return (isset($q_config) && !empty($q_config));
+        }
+        
+        public function extras_qtranslate_admin( $extra_admin_content ) {
+            $qtranslate_locale = $this->extras_qtranslate_detect();
+
+            if( $qtranslate_locale ) {
+                $extra_admin_content .= '<tr valign="top">
+    <th scope="row">'.__('qTranslate/mqTranslate', 'aspexifblikebox').'<br /><span style="font-size: 10px">'.__('Try to detect qTranslate/mqTranslate language and force it instead of language set in Localization.', 'aspexifblikebox').'</span></th>
+    <td><input type="checkbox" value="on" name="afblb_qtranslate" disabled readonly />'.$this->get_pro_link().'</td>
+</tr>';
+            }
+            
+            return $extra_admin_content;
+        }
+        
+        public function extras_polylang_admin( $extra_admin_content ) {
+
+            if(function_exists('pll_current_language')) {
+                $extra_admin_content .= '<tr valign="top">
+    <th scope="row">'.__('Polylang', 'aspexifblikebox').'<br /><span style="font-size: 10px">'.__('Try to detect Polylang language and force it instead of language set in Localization.', 'aspexifblikebox').'</span></th>
+    <td><input type="checkbox" value="on" name="afblb_polylang" disabled readonly />'.$this->get_pro_link().'</td>
+</tr>';
+            }
+            
+            return $extra_admin_content;
         }
     }
 

@@ -6,7 +6,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=dryja
 Tags: facebook, likebox, like box, floating, button, slider, facebook likebox, facebook like box, facebook slider, facebook buttons
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,8 @@ Plugin adds fancy Facebook Like Box slider (slide on hover (or click - premium v
 * **High resolution** buttons (SVG files included)
 * 8 amazing original icons / buttons
 * **qTranslate compatible**
+* **mqTranslate compatible**
+* **Polylang compatible**
 * On / off for mobile
 * http or https option
 * Button placement customization
@@ -50,6 +52,7 @@ Plugin adds fancy Facebook Like Box slider (slide on hover (or click - premium v
 * Slide on mouse hover / click
 * Set slide time
 * Disable on small screens
+* Load widget on page load / on slideout
 * **1-Year upgrades &amp; support**
 * 30-Day Money-Back Guarantee
 * **[Get Premium version and see DEMO](http://aspexi.com/downloads/aspexi-facebook-like-box-slider-hd/?src=plugin_page)**
@@ -109,6 +112,10 @@ Yes. Simply create your file and copy it to your current theme (or child) direct
 
 == Changelog ==
 
+= 1.2.3 =
+* Minor fixes
+* New premium version functionalities!
+
 = 1.2.2 =
 * Minor fixes
 
@@ -130,6 +137,9 @@ Yes. Simply create your file and copy it to your current theme (or child) direct
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.2.3 =
+No action required.
 
 = 1.2.2 =
 No action required.

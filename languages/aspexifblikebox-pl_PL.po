@@ -1,0 +1,384 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Aspexi Facebook Like Box Slider HD\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-22 17:56+0100\n"
+"PO-Revision-Date: 2014-10-22 17:57+0100\n"
+"Last-Translator: Aspexi <info@aspexi.pl>\n"
+"Language-Team: Aspexi <info@aspexi.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../aspexi-facebook-like-box.php:138
+msgid "Aspexi Facebook Like Box"
+msgstr "Aspexi Facebook Like Box"
+
+#: ../aspexi-facebook-like-box.php:138
+msgid "Facebook Like Box"
+msgstr "Facebook Like Box"
+
+#: ../aspexi-facebook-like-box.php:144
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nie masz wystarczających uprawnień do przeglądania tej strony."
+
+#: ../aspexi-facebook-like-box.php:153
+msgid "Wrong or missing status. Available statuses: enabled and disabled. Settings not saved."
+msgstr "Nieprawidłowy Status. Dostępne statusy: włączony i wyłączony. Nie zapisano."
+
+#: ../aspexi-facebook-like-box.php:164
+msgid "Settings saved."
+msgstr "Zapisano."
+
+#: ../aspexi-facebook-like-box.php:297
+msgid "Aspexi Facebook Like Box Settings"
+msgstr "Ustawienia Aspexi Facebook Like Box"
+
+#: ../aspexi-facebook-like-box.php:307
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: ../aspexi-facebook-like-box.php:312
+msgid "Like Box"
+msgstr "Like Box"
+
+#: ../aspexi-facebook-like-box.php:314
+msgid "enabled"
+msgstr "włączony"
+
+#: ../aspexi-facebook-like-box.php:315
+msgid "disabled"
+msgstr "wyłączony"
+
+#: ../aspexi-facebook-like-box.php:319
+msgid "Facebook Page URL"
+msgstr "Adres Strony Facebook"
+
+#: ../aspexi-facebook-like-box.php:324
+msgid "Like Box Height"
+msgstr "Wysokość"
+
+#: ../aspexi-facebook-like-box.php:328
+msgid "Like Box Width"
+msgstr "Szerokość"
+
+#: ../aspexi-facebook-like-box.php:332
+msgid "Show Friends' Faces"
+msgstr "Pokaż Twarze Znajomych"
+
+#: ../aspexi-facebook-like-box.php:336
+msgid "Number of Connections"
+msgstr "Ilość Połączeń do Wyświetlenia"
+
+#: ../aspexi-facebook-like-box.php:336
+msgid "For auto generated number of connection set 0"
+msgstr "Ustaw 0 aby automatycznie dostosować liczbę połączeń"
+
+#: ../aspexi-facebook-like-box.php:340
+msgid "Show Posts (Stream)"
+msgstr "Pokaż Posty"
+
+#: ../aspexi-facebook-like-box.php:344
+msgid "Force Wall"
+msgstr "Wymuś Wyświetlenie Tablicy"
+
+#: ../aspexi-facebook-like-box.php:344
+msgid "For \"place\" Pages (Pages that have a physical location that can be used with check-ins), this specifies whether the stream contains posts by the Page or just check-ins from friends."
+msgstr "Dla stron typu Miejsca, wyświetlaj też posty strony lub tylko check-iny znajomych"
+
+#: ../aspexi-facebook-like-box.php:348
+msgid "Header"
+msgstr "Nagłówek"
+
+#: ../aspexi-facebook-like-box.php:348
+msgid "Specifies whether to display the Facebook header at the top of the plugin."
+msgstr "Pokazuj nagłówek Facebooka na górze Like Boxa"
+
+#: ../aspexi-facebook-like-box.php:352
+msgid "Localization"
+msgstr "Język"
+
+#: ../aspexi-facebook-like-box.php:352
+msgid "Change might not be visible immediately due to Facebook / browser cache"
+msgstr "Zmiana może nie być widoczna od razu ze względu na kesz Facebook lub przeglądarki"
+
+#: ../aspexi-facebook-like-box.php:364
+#: ../aspexi-facebook-like-box.php:401
+#: ../aspexi-facebook-like-box.php:472
+#: ../aspexi-facebook-like-box.php:501
+msgid "Save settings"
+msgstr "Zapisz"
+
+#: ../aspexi-facebook-like-box.php:365
+#: ../aspexi-facebook-like-box.php:402
+#: ../aspexi-facebook-like-box.php:473
+#: ../aspexi-facebook-like-box.php:502
+msgid "Save and preview"
+msgstr "Zapisz i zobacz podgląd"
+
+#: ../aspexi-facebook-like-box.php:369
+msgid "Button Settings"
+msgstr "Ustawienia Ikony"
+
+#: ../aspexi-facebook-like-box.php:374
+msgid "Button Space"
+msgstr "Odległość od Krawędzi"
+
+#: ../aspexi-facebook-like-box.php:374
+msgid "Space between button and page edge"
+msgstr "Określa pustą przestrzeń między ikoną a krawędzią strony"
+
+#: ../aspexi-facebook-like-box.php:378
+msgid "Button Placement"
+msgstr "Położenie Ikony"
+
+#: ../aspexi-facebook-like-box.php:379
+msgid "top"
+msgstr "na górze"
+
+#: ../aspexi-facebook-like-box.php:380
+msgid "middle"
+msgstr "w środku"
+
+#: ../aspexi-facebook-like-box.php:381
+msgid "bottom"
+msgstr "na dole"
+
+#: ../aspexi-facebook-like-box.php:382
+#: ../aspexi-facebook-like-box.php:419
+msgid "fixed"
+msgstr "stała wartość"
+
+#: ../aspexi-facebook-like-box.php:383
+msgid "from slider top"
+msgstr "od góry okienka"
+
+#: ../aspexi-facebook-like-box.php:387
+msgid "Button Image"
+msgstr "Obraz Ikony"
+
+#: ../aspexi-facebook-like-box.php:393
+msgid "High Resolution"
+msgstr "Wysoka Rozdzielczość"
+
+#: ../aspexi-facebook-like-box.php:393
+msgid "Use SVG high quality images instead of PNG if possible. Recommended for Retina displays (iPhone, iPad, MacBook Pro)."
+msgstr "Używaj wektorowych plików SVG o wysokiej jakości zamiast plików PNG jeśli możliwe. Zalecane dla wyświetlaczy Retina (iPhone, iPad, MacBook Pro)."
+
+#: ../aspexi-facebook-like-box.php:405
+msgid "Advanced Look and Feel"
+msgstr "Zaawansowane Ustawienia Wyglądu"
+
+#: ../aspexi-facebook-like-box.php:410
+msgid "Placement"
+msgstr "Położenie"
+
+#: ../aspexi-facebook-like-box.php:412
+msgid "left"
+msgstr "po lewej"
+
+#: ../aspexi-facebook-like-box.php:413
+msgid "right"
+msgstr "po prawej"
+
+#: ../aspexi-facebook-like-box.php:417
+msgid "Vertical placement"
+msgstr "Położenie w Pionie"
+
+#: ../aspexi-facebook-like-box.php:418
+msgid "center"
+msgstr "w środku"
+
+#: ../aspexi-facebook-like-box.php:420
+msgid "from page top"
+msgstr "od góry strony"
+
+#: ../aspexi-facebook-like-box.php:424
+msgid "Color Scheme"
+msgstr "Schemat Kolorów"
+
+#: ../aspexi-facebook-like-box.php:426
+msgid "light"
+msgstr "jasny"
+
+#: ../aspexi-facebook-like-box.php:427
+msgid "dark"
+msgstr "ciemny"
+
+#: ../aspexi-facebook-like-box.php:431
+msgid "Border Color"
+msgstr "Kolor Obramowania"
+
+#: ../aspexi-facebook-like-box.php:435
+msgid "Border Width"
+msgstr "Szerokość Obramowania"
+
+#: ../aspexi-facebook-like-box.php:439
+msgid "Background Color"
+msgstr "Kolor Tła"
+
+#: ../aspexi-facebook-like-box.php:443
+msgid "Slide on Mouse"
+msgstr "Wysuń"
+
+#: ../aspexi-facebook-like-box.php:445
+msgid "hover"
+msgstr "po najechaniu"
+
+#: ../aspexi-facebook-like-box.php:446
+msgid "click"
+msgstr "po kliknięciu"
+
+#: ../aspexi-facebook-like-box.php:450
+msgid "Slide Time"
+msgstr "Prędkość Wysuwania"
+
+#: ../aspexi-facebook-like-box.php:451
+msgid "milliseconds"
+msgstr "millisekund"
+
+#: ../aspexi-facebook-like-box.php:454
+msgid "Delay FB content load"
+msgstr "Opóźnij ładowanie zawartości FB"
+
+#: ../aspexi-facebook-like-box.php:454
+msgid "Checking this box will prevent from loading the facebook content while loading the whole page. With this box checked the page will load faster, but facebook content may appear a bit later while opening the box for the first time."
+msgstr "Zaznaczenie tego spowoduje, że zawartość z facebooka nie będzie ładowana podczas ładowania całej strony. Dzięki temu strona załaduje się szybciej, ale treści z facebooka mogą pojawić się odrobinę później podczas pierwszego rozwijania panelu."
+
+#: ../aspexi-facebook-like-box.php:458
+msgid "Disable on GET"
+msgstr "Wyłącz dla zmiennej GET"
+
+#: ../aspexi-facebook-like-box.php:458
+msgid "Example: set Parameter=iframe and Value=true. Like Box will be disabled on all URLs like yourwebsite.com/?iframe=true."
+msgstr "Przykładowo, ustawiając Parametr=iframe i Wartosc=true, Like Box nie wyświetli się na stronach zawierających te zmienne w adresie, np. yourwebsite.com/?iframe=true."
+
+#: ../aspexi-facebook-like-box.php:459
+msgid "Parameter"
+msgstr "Parametr"
+
+#: ../aspexi-facebook-like-box.php:460
+msgid "Value"
+msgstr "Wartość"
+
+#: ../aspexi-facebook-like-box.php:464
+msgid "Disable on Small Screens"
+msgstr "Ukryj na Małych Ekranach"
+
+#: ../aspexi-facebook-like-box.php:464
+msgid "Dynamically hide the plugin if screen size is smaller than like box size (CSS media query)"
+msgstr "Dynamicznie ukryj plugin jeśli szerokość ekranu jest mniejsza niż szerokość pluginu (użyj CSS media query)"
+
+#: ../aspexi-facebook-like-box.php:476
+msgid "Enable on Mobile"
+msgstr "Wyświetlaj na Urządzeniach Mobilnych"
+
+#: ../aspexi-facebook-like-box.php:481
+msgid "iPad & iPod"
+msgstr "iPad & iPod"
+
+#: ../aspexi-facebook-like-box.php:485
+msgid "iPhone"
+msgstr "iPhone"
+
+#: ../aspexi-facebook-like-box.php:489
+msgid "Android"
+msgstr "Android"
+
+#: ../aspexi-facebook-like-box.php:493
+msgid "Other Mobile Devices"
+msgstr "Inne Urządzenia Mobilne"
+
+#: ../aspexi-facebook-like-box.php:531
+msgid "Get PRO version"
+msgstr "Zobacz wersję PRO"
+
+#: ../aspexi-facebook-like-box.php:657
+msgid "qTranslate/mqTranslate"
+msgstr "qTranslate/mqTranslate"
+
+#: ../aspexi-facebook-like-box.php:657
+msgid "Try to detect qTranslate/mqTranslate language and force it instead of language set in Localization."
+msgstr "Próbuj wykryć język qTranslate/mqTranslate i ustaw go zamiast języka skonfigurowanego w pluginie."
+
+#: ../aspexi-facebook-like-box.php:669
+msgid "Polylang"
+msgstr "Polylang"
+
+#: ../aspexi-facebook-like-box.php:669
+msgid "Try to detect Polylang language and force it instead of language set in Localization."
+msgstr "Próbuj wykryć język Polylang i ustaw go zamiast języka skonfigurowanego w pluginie."
+
+#~ msgid "Width has to be positive number. Settings not saved."
+#~ msgstr "Szerokość musi być liczbą dodatnią. Nie zapisano."
+
+#~ msgid "Height has to be positive number. Settings not saved."
+#~ msgstr "Wysokość musi być liczbą dodatnią. Nie zapisano."
+
+#~ msgid ""
+#~ "Button space has to be integer value higher or equals 0. Settings not "
+#~ "saved."
+#~ msgstr ""
+#~ "Odległość od Krawędzi musi być liczbą większą lub równą 0. Nie zapisano."
+
+#~ msgid ""
+#~ "Wrong or missing protocol. Available protocols: http and https. Settings "
+#~ "not saved."
+#~ msgstr ""
+#~ "Nieprawidłowy protokół. Dostępne protokoły: http i https. Nie zapisano."
+
+#~ msgid ""
+#~ "Wrong or missing placement. Available positions: left and right. Settings "
+#~ "not saved."
+#~ msgstr ""
+#~ "Nieprawidłowe Położenie. Dostępne położenia: po lewej i po prawej. Nie "
+#~ "zapisano."
+
+#~ msgid ""
+#~ "Number of connections has to be integer value between 0 and 100. Settings "
+#~ "not saved."
+#~ msgstr ""
+#~ "Ilość Połączeń do Wyświetlenia musi być liczbą między 0 a 100. Nie "
+#~ "zapisano."
+
+#~ msgid ""
+#~ "Border color is not valid RGB value (example #00ff00). Settings not saved."
+#~ msgstr ""
+#~ "Nieprawidłowa wartość RGB Koloru Obramowania (przykład #00ff00). Nie "
+#~ "zapisano."
+
+#~ msgid ""
+#~ "Border Width has to be integer value higher or equals 0. Settings not "
+#~ "saved."
+#~ msgstr ""
+#~ "Szerokość Obramowania musi być liczbą większą lub równą 0. Nie zapisano."
+
+#~ msgid ""
+#~ "Background color is not valid RGB value (example #00ff00). Settings not "
+#~ "saved."
+#~ msgstr ""
+#~ "Nieprawidłowa wartość RGB Koloru Tła (przykład #00ff00). Nie zapisano."
+
+#~ msgid ""
+#~ "Wrong or missing Color Scheme. Available schemes: light and dark. "
+#~ "Settings not saved."
+#~ msgstr ""
+#~ "Nieprawidłowy Schemat Kolorów. Dostępne schematy to jasny i ciemny. Nie "
+#~ "zapisano."
+
+#~ msgid ""
+#~ "Wrong or missing Slide on option. Available options: hover and click. "
+#~ "Settings not saved."
+#~ msgstr ""
+#~ "Nieprawidłowa wartość Wysuń na. Możliwe opcje to najechanie lub "
+#~ "kliknięcie. Nie zapisano."
+
+#~ msgid ""
+#~ "Slide Time has to be integer value higher or equals 0. Settings not saved."
+#~ msgstr ""
+#~ "Czas Wysuwania musi być liczbą większą lub równą zero. Nie zapisano."
